@@ -1,0 +1,92 @@
+.Post-Container{
+    flex: 1;
+    margin: 60px;
+    
+    min-width: 350px;
+    /* height: 350px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: #f5fbfd;
+    
+
+    
+}
+.Post-Container:hover .icon{
+    opacity: 1;}
+    
+.Post-Wrapper{
+    display: flex;
+     flex-direction: column;
+}
+
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.image img{
+    width: 250px;
+    height: 300px;  
+    
+    
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+.title h3{
+   font-weight: lighter;
+    color: blueviolet;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+}
+
+.description{
+    display: flex;
+    width: 400px;
+    font-family: 'Gentium Basic', serif;
+}
+
+.comments input{
+    width: 350px;
+    height: 30px;
+    border: 1px solid pink;
+    
+}
+.icon{
+    
+    margin-left: 100%;
+}
+.Likes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.like{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+.like:hover {
+    background-color: #e9f5f5;
+    transform: scale(1.1);
+    
+  }
+
+hr{
+    border: 1px solid rgb(178, 201, 243);
+    margin: 5px;
+}
