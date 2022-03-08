@@ -1,67 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Categories from "../Components/Categories/Categories";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
-import Posts from "../Components/Posts";
+
+import Slider from "../Components/Slider/Slider";
 import "./Home.css";
+import RecentPosts from './../Components/RecentPosts/RecentPosts';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({duration: 1000});
+}, [])
   return (
     <div>
       <Navbar />
-      <div>
-      <div className="Title">
-          <h1>Welcome To my Blog</h1>
+      <Slider />
+      <div className="Welcome">
+        <div className="Image" data-aos="fade-right">
+          <img src="https://c0.wallpaperflare.com/preview/144/977/100/cook-cooking-food-cooker.jpg" />
         </div>
-      <div className="Cont">
-
-        <div className="About-Me">
-          
-          <p>
-            Passionate by Travelling and Cooking. Here I share All My
-            Experiences, My Recipes.
-          </p>
-          <p>
-            Register And Join Me to Find More Informations about Places to
-            visit, And To try My Delecious Food
-          </p>
-
-        
-
+        <div className="Me" data-aos="fade-left">
+          <div className="Title">
+            <span className="firsttitle">Welcome To </span>
+            <span className="secondtitle">My Blog</span>
+          </div>
+          <div className="Cont">
+            
+              <span>
+                Passionate by Travelling and Cooking.
+                 Here I share All My Travel Experiences and My Recipes.
+              </span>
+              <span>
+                Register And Join Me to Find More Informations about Places to
+                visit, And To try My Delecious Food
+              </span>
+           
+          </div>
         </div>
       </div>
 
-      </div>
+      <Categories/>
+      <RecentPosts/>
 
 
-      <div class="gallery">
-  <a target="_blank" href="#">
-    <img src="https://i.pinimg.com/564x/c5/59/84/c5598425ece6d53abfb32ae4c5c46bf0.jpg" alt="Cinque Terre" width="600" height="400"/>
-  </a>
-  <div class="desc">Grenade, Espagne</div>
-</div>
 
-<div class="gallery">
-  <a target="_blank" href="#">
-    <img src="https://i.pinimg.com/736x/95/5d/04/955d04a83a465a683d97b89a8f5f68eb.jpg" alt="Forest" width="600" height="400"/>
-  </a>
-  <div class="desc">Pyramid, Egypt</div>
-</div>
 
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://i.pinimg.com/564x/1b/60/78/1b6078b5bd51521860a43103b0a6cae5.jpg" alt="Northern Lights" width="600" height="400"/>
-  </a>
-  <div class="desc">Yummy Pizza</div>
-</div>
 
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="https://i.pinimg.com/564x/db/91/46/db9146bc55e962b0c97882d365f64ca4.jpg" alt="Mountains" width="600" height="400"/>
-  </a>
-  <div class="desc">Yummy Pasta</div>
-</div>
-
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

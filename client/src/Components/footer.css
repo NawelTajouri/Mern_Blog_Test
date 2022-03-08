@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffefd5;
+  margin-top: -10px;
+}
+.footer h3 {
+  font-family: "Abril Fatface", cursive;
+  color: rgb(204, 133, 0);
+  letter-spacing: 2px;
+}
+
+.footer .Newsletter p {
+  color: rgb(172, 162, 152);
+  margin-bottom: 5px;
+}
+.footer .Newsletter .btn {
+  min-height: 27px;
+  min-width: 100px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background: #ffc87c;
+  color: #fff;
+  cursor: pointer;
+}
+.footer .email-input {
+  margin-top: 10px;
+  min-height: 23px;
+  border-right: none;
+  border-top: 1px solid #ffc87c;
+  border-left: 1px solid #ffc87c;
+  border-bottom: 1px solid #ffc87c;
+}
+
+.footer .social-contact{
+    margin-top: 20px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.footer .contact a{
+    color: rgb(172, 162, 152);
+    margin-bottom: 5px;
+}
+
+.footer .infos-contact .address{
+    display: flex;
+   width: 60%;
+}
+@media only screen and (max-width: 380px){
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

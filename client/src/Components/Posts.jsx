@@ -1,17 +1,18 @@
 import React from "react";
-import { postItems } from "../existing_posts";
+
 import Post from "./Post";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getallposts, getPost } from "./../redux/Actions/postActions";
 import { getAuthUser } from "../redux/Actions/authActions";
+import './Post.css';
 
-const mystyle = {
-  padding: "20px",
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-};
+// const mystyle = {
+//   padding: "50px",
+//   display: "flex",
+//   flexWrap: "wrap",
+//   justifyContent: "space-between",
+// };
 
 const Posts = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const Posts = () => {
   return (
     <>
       {allposts  ? (
-        <div style={mystyle}>
+        <div  className="allposts">
           {allposts.map((item) => (
             <Post item={item} key={item.id} />
           ))}

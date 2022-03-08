@@ -26,7 +26,7 @@ const Commentaire = ({item}) => {
               return (
                 
                 <div style={{display: "flex", alignItems:"center"}} key={record._id}>
-                  <span style={{ fontWeight: "600", fontSize:"15px", color:"blue" }}>
+                  <span style={{ fontWeight: "600", fontSize:"15px", color:"brown" }}>
                     {record.commentedBy} {": "}
                   </span>
                   

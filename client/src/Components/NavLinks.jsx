@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAuthUser, logout } from './../redux/Actions/authActions';
 import { Link } from 'react-router-dom';
+
 const NavbarLinks = ({ user }) => {
   // console.log(user)
   let token=localStorage.getItem('token');
@@ -31,22 +32,32 @@ const logoutf = () => {
       {token? (
     <div className="Nav_Container">
         <div className="Nav_Wrapper">
-          <div className="left">
-            <span>Posts</span>
-          </div>
-          <div className="center">
-            <span>My Blog</span>
+        <div className="Top">
+    
+    <span>My Blog</span>
+  
+  </div>
+  <div className="Buttom">
+  <div className="left">
+            <a>Posts</a>
+            <a>Categories</a>
           </div>
           <div className="right">
-            <button>Welcome {user.username}</button>
-            <Link to="/"><button   onClick={logoutf}>LogOut</button></Link>
+            <a>Welcome {user.username}</a>
+            <Link to="/"><a   onClick={logoutf}>LogOut</a></Link>
             
           </div>
+    </div>
+         
+
+
         </div>
       </div>
       ): <h1>fail</h1>}
 
     </>
+
+
   );
 };
 

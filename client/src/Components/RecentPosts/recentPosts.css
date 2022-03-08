@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+.postsContatiner{
+    padding: 390px  0 0 0;
+    /* display: flex; */
+}
+.posts{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.postsContatiner .Title span{
+  font-family: 'Satisfy', cursive;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.posts .card{
+    position: relative;
+    max-width: 500px;
+    background: #333;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    /* flex-direction: column; */
+    max-height: 250px;
+}
+.posts .card .imgBx{
+    max-width: 150px;
+    flex: 0 0 150px;
+}
+.posts .card .imgBx img{
+    max-width: 150%;
+    max-height: 200px;
+   
+}
+.posts .card .content{
+    margin-left: 20px;
+}
+@media only screen and (max-width: 375px) {
+  .postsContatiner {
+    padding: 1070px 0 0 0px;
+  }
+
+  .posts {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .posts .card {
+    max-width: 300px;
+    display: flex;
+    max-height: 250px;
+    margin-left: -20px;
+  }
+  .posts .card .content {
+    font-size: smaller;
+  }
+}
